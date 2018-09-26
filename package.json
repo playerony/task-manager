@@ -1,0 +1,22 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "Simple task manager",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/playerony/task-manager.git"
+  },
+  "author": "Paweł Wojtasiński",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/playerony/task-manager/issues"
+  },
+  "homepage": "https://github.com/playerony/task-manager#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
