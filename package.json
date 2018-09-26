@@ -2,10 +2,11 @@
   "name": "task-manager",
   "version": "1.0.0",
   "description": "Simple task manager",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js"
+    "start": "node lib/index.js",
+    "server": "nodemon lib/index.js",
+    "test": "mocha ./test"
   },
   "repository": {
     "type": "git",
