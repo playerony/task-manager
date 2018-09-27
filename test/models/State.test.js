@@ -1,13 +1,13 @@
 const chai = require("chai");
 const expect = chai.expect;
 
-const User = require("../../lib/models/State");
+const State = require("../../lib/models/State");
 
 describe("State model", () => {
   it("should return error if required areas are missing", () => {
-    const user = new User();
+    const state = new State();
 
-    user.validate(err => {
+    state.validate(err => {
       expect(err.errors.name).to.exist;
     });
   });
