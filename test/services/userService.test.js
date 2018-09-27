@@ -72,4 +72,20 @@ describe("User service", () => {
         .to.equal("test");
     });
   });
+
+  context("saveUser", () => {
+    let saveStumb, result;
+
+    beforeEach(async () => {
+      saveStumb = sandbox.stub(User.prototype, "save").resolves(sampleUser);
+
+      result = await UserService.saveUser(sampleUser);
+    });
+
+    it("should save the user", () => {
+      expect(result).to.exist;
+      expect(result).to.be.a("object");
+      expect(saveStumb).to.have.been.calledOnce;
+    });
+  });
 });
