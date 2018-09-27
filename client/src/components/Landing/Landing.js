@@ -10,7 +10,7 @@ export default () => {
         <div className="landing-content">
           <h1>Task Manager</h1>
           <p>Simplest way to manage your time</p>
-          <Link to="/list" className="landing-content--see-more-button">
+          <Link to="/" className="landing-content--see-more-button">
             Let's create your first task
           </Link>
         </div>

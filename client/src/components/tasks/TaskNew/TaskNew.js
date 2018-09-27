@@ -1,5 +1,5 @@
 import React from "react";
 
 export default () => {
-  return <div>Dashboard</div>;
+  return <div>TaskNew</div>;
 };
