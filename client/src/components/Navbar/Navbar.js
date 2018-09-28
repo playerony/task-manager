@@ -17,7 +17,7 @@ class Navbar extends Component {
         ];
       default:
         return [
-          <li className="navbar-button nav-button-greetings" key="1">
+          <li className="navbar-button navbar-button--greetings" key="1">
             <a>Hello, {auth.firstName}</a>
           </li>,
           <li className="navbar-button" key="2">

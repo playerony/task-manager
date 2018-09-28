@@ -27,6 +27,7 @@
   text-align: center;
   background-color: #fff;
   margin: 5px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
 
   & > a {
     text-decoration: none;
@@ -39,7 +40,7 @@
   }
 }
 
-.nav-button-greetings {
+.navbar-button--greetings {
   width: 230px;
 
   &:hover {
@@ -47,12 +48,8 @@
   }
 }
 
-@media screen and (max-width: 770px) {
-  .nav-wrapper {
-    box-shadow: none;
-  }
-
-  .nav-container {
+@media screen and (max-width: 720px) {
+  .navbar-content {
     padding: 0;
 
     & > ul {
@@ -62,13 +59,13 @@
     }
   }
 
-  .nav-button {
+  .navbar-button {
     height: 30px;
     line-height: 30px;
-    width: 100%;
+    width: calc(100% - 14px);
   }
 
-  .nav-button:last-child {
+  .navbar-button:last-child {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   }
 }
