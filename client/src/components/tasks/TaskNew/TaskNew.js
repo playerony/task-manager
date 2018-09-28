@@ -1,11 +1,33 @@
 import React, { Component } from "react";
+import { reduxForm } from "redux-form";
 
-import requireAuth from "../../requireAuth";
+import TaskForm from "../TaskForm/TaskForm";
+import TaskFormReview from "../TaskFormReview/TaskFormReview";
 
 class TaskNew extends Component {
+  state = { showFormReview: false };
+
+  renderContent() {
+    if (this.state.showFormReview) {
+      return (
+        <TaskFormReview
+          onCancel={() => this.setState({ showFormReview: false })}
+        />
+      );
+    }
+
+    return (
+      <TaskForm onTaskSubmit={() => this.setState({ showFormReview: true })} />
+    );
+  }
+
   render() {
-    return <div>TaskNew</div>;
+    console.log(this.state.showFormReview);
+
+    return <div style={{ marginTop: "100px" }}>{this.renderContent()}</div>;
   }
 }
 
-export default requireAuth(TaskNew);
+export default reduxForm({
+  form: "taskForm"
+})(TaskNew);
