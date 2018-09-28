@@ -1,5 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 
-export default () => {
-  return <div>TaskNew</div>;
-};
+import requireAuth from "../../requireAuth";
+
+class TaskNew extends Component {
+  render() {
+    return <div>TaskNew</div>;
+  }
+}
+
+export default requireAuth(TaskNew);
