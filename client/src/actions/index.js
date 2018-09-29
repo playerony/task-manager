@@ -26,3 +26,9 @@ export const fetchTasks = () => async dispatch => {
 
   return dispatch({ type: FETCH_TASKS, payload: response.data });
 };
+
+export const deleteTask = taskId => async dispatch => {
+  await axios.delete(`/api/tasks/${taskId}`);
+
+  dispatch(fetchTasks());
+};

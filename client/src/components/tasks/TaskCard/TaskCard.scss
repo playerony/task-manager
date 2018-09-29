@@ -6,3 +6,18 @@
   margin: 20px;
   text-align: left;
 }
+
+.task-card-content {
+  padding: 3px;
+}
+
+.task-card-delete {
+  color: #515151;
+  font-size: 14px;
+  float: right;
+  cursor: pointer;
+
+  &:hover {
+    color: #2b2b2b;
+  }
+}

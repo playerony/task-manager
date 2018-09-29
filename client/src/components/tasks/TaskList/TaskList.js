@@ -6,7 +6,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import TaskCard from "../TaskCard/TaskCard";
 import requireAuth from "../../requireAuth";
 
-import { fetchTasks, fetchStates } from "../../../actions";
+import { fetchTasks, fetchStates, deleteTask } from "../../../actions";
 
 import "./TaskList.scss";
 
@@ -20,13 +20,16 @@ class TaskList extends Component {
   };
 
   updateBackgroundHeight() {
-    this.setState({
-      style: {
-        background: {
-          height: 100 + (Object.keys(this.props.tasks).length - 3) * 25 + "vh"
+    const tasks = Object.keys(this.props.tasks).length - 3;
+
+    if (tasks > 0)
+      this.setState({
+        style: {
+          background: {
+            height: 100 + tasks * 25 + "vh"
+          }
         }
-      }
-    });
+      });
   }
 
   async componentDidMount() {
@@ -38,7 +41,7 @@ class TaskList extends Component {
 
   renderTasks() {
     return this.props.tasks.map(task => {
-      return <TaskCard key={task.name} {...task} />;
+      return <TaskCard key={task.name} onDelete={this.props.deleteTask} {...task} />;
     });
   }
 
@@ -73,5 +76,5 @@ function mapStateToProps({ tasks }) {
 
 export default connect(
   mapStateToProps,
-  { fetchTasks, fetchStates }
+  { fetchTasks, fetchStates, deleteTask }
 )(requireAuth(TaskList));
