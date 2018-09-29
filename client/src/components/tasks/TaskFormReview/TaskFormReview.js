@@ -11,20 +11,25 @@ import "./TaskFormReview.scss";
 const TaskFormReview = ({ onCancel, formValues, submitTask, history }) => {
   const reviewFields = _.map(formFields, ({ label, name }) => {
     return (
-      <div key={name}>
-        <label>{label}</label>
-        <div>{formValues[name]}</div>
+      <div className="form-review--field" key={name}>
+        <label className="form-review--field--label">{label}</label>
+        <div className="form-review--field--value">{formValues[name]}</div>
       </div>
     );
   });
 
   return (
-    <div>
-      <h5>Please confirm your entries</h5>
+    <div className="form-review-wrapper">
+      <h1>Please confirm your entries</h1>
       {reviewFields}
-      <button onClick={onCancel}>Back</button>
-      <button onClick={() => submitTask(formValues, history)}>
+      <button
+        className="form-review--button"
+        onClick={() => submitTask(formValues, history)}
+      >
         Create a new task
+      </button>
+      <button className="form-review--button" onClick={onCancel}>
+        Back
       </button>
     </div>
   );
