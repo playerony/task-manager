@@ -1,0 +1,58 @@
+.task-list-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-529919.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.task-list-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(189, 61, 58, 0.2);
+  display: flex;
+}
+
+.task-list--add-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  text-decoration: none;
+  display: block;
+  border: 3px solid #fff;
+  text-align: center;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  outline: none;
+  width: 75px;
+  height: 75px;
+  margin: 25px;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  line-height: 75px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 36px;
+  }
+
+  @media screen and (max-width: 540px) {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 32px;
+  }
+}
