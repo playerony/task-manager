@@ -5,17 +5,18 @@ import { Link } from "react-router-dom";
 
 import formFields from "../formFields";
 import TaskField from "../TaskField/TaskField";
+import TaskSelect from "../TaskSelect/TaskSelect";
 
 import "./TaskForm.scss";
 
 class TaskForm extends Component {
   renderFields() {
-    return _.map(formFields, ({ label, name }) => {
+    return _.map(formFields, ({ type, label, name }) => {
       return (
         <Field
           key={name}
-          component={TaskField}
-          type="text"
+          component={type === "text" ? TaskField : TaskSelect}
+          type={type}
           label={label}
           name={name}
         />
