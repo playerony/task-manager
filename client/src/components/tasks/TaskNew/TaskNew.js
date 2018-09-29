@@ -4,6 +4,8 @@ import { reduxForm } from "redux-form";
 import TaskForm from "../TaskForm/TaskForm";
 import TaskFormReview from "../TaskFormReview/TaskFormReview";
 
+import "./TaskNew.scss";
+
 class TaskNew extends Component {
   state = { showFormReview: false };
 
@@ -22,9 +24,11 @@ class TaskNew extends Component {
   }
 
   render() {
-    console.log(this.state.showFormReview);
-
-    return <div style={{ marginTop: "100px" }}>{this.renderContent()}</div>;
+    return (
+      <div className="task-new-wrapper">
+        <div className="task-new-mask">{this.renderContent()}</div>
+      </div>
+    );
   }
 }
 

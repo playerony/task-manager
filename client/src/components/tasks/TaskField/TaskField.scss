@@ -1,0 +1,52 @@
+.task-field--field {
+  display: block;
+  margin: auto;
+  width: calc(100% - 10px);
+  padding: 10px;
+
+  @media screen and (max-width: 720px) {
+    padding: 7px;
+  }
+
+  @media screen and (max-width: 540px) {
+    padding: 5px;
+  }
+}
+
+.task-field--field--label {
+  padding-left: 5px;
+  font-size: 14px;
+  padding: 3px;
+
+  & > span {
+    color: #ff4040;
+    font-weight: 700;
+    font-size: 10px;
+  }
+}
+
+.task-field--field--input {
+  height: 30px;
+  width: calc(100% - 20px);
+  outline: none;
+  font-size: 14px;
+  padding: 0 5px;
+  border: 0;
+  border-bottom: 2px solid #515151;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.4s all ease;
+}
+
+.task-field--field--input:focus {
+  border-bottom: 2px solid #515151;
+}
+
+.task-field--field--select {
+  width: calc(100% - 10px);
+}
+
+.task-field--field--error {
+  color: #ff4040;
+  margin: 2px;
+  font-size: 12px;
+}

@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import formFields from "../formFields";
 import TaskField from "../TaskField/TaskField";
 
+import "./TaskForm.scss";
+
 class TaskForm extends Component {
   renderFields() {
     return _.map(formFields, ({ label, name }) => {
@@ -23,13 +25,18 @@ class TaskForm extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.props.handleSubmit(this.props.onTaskSubmit)}>
-          {this.renderFields()}
-          <Link to="/tasks">Cancel</Link>
-          <button type="submit">Next</button>
-        </form>
-      </div>
+      <form
+        className="task-form-wrapper"
+        onSubmit={this.props.handleSubmit(this.props.onTaskSubmit)}
+      >
+        {this.renderFields()}
+        <button type="submit" className="task-form--button">
+          Next
+        </button>
+        <Link to="/tasks" className="task-form--button">
+          Cancel
+        </Link>
+      </form>
     );
   }
 }

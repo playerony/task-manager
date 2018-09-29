@@ -1,0 +1,36 @@
+.task-form-wrapper {
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.task-form--button {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  border: 2px solid #515151;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #515151;
+  outline: none;
+  float: right;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 100px;
+  margin: 10px 10px 0px 10px;
+  text-align: center;
+
+  @media screen and (max-width: 540px) {
+    float: none;
+    margin: 10px auto;
+    width: 250px;
+    padding: 10px 0px 10px 0px;
+  }
+
+  &:hover {
+    background-color: #2b2b2b;
+    color: #fff;
+    border: 2px solid #2b2b2b;
+  }
+}
