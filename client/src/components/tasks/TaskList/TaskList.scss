@@ -23,6 +23,14 @@
   width: 60%;
   display: inline-block;
   text-align: center;
+
+  @media screen and (max-width: 720px) {
+    width: 300px;
+  }
+
+  @media screen and (max-width: 540px) {
+    width: 270px;
+  }
 }
 
 .task-list--button {
