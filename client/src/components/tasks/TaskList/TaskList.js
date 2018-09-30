@@ -11,48 +11,23 @@ import { fetchTasks, fetchStates, deleteTask } from "../../../actions";
 import "./TaskList.scss";
 
 class TaskList extends Component {
-  state = {
-    style: {
-      background: {
-        height: "100vh"
-      }
-    }
-  };
-
-  updateBackgroundHeight() {
-    const tasks = Object.keys(this.props.tasks).length - 3;
-
-    if (tasks > 0)
-      this.setState({
-        style: {
-          background: {
-            height: 100 + tasks * 25 + "vh"
-          }
-        }
-      });
-  }
-
   async componentDidMount() {
     await this.props.fetchTasks();
     await this.props.fetchStates();
-
-    this.updateBackgroundHeight();
   }
 
   renderTasks() {
     return this.props.tasks.map(task => {
-      return <TaskCard key={task.name} onDelete={this.props.deleteTask} {...task} />;
+      return (
+        <TaskCard key={task.name} onDelete={this.props.deleteTask} {...task} />
+      );
     });
   }
 
   render() {
     return (
-      <div
-        id="content"
-        className="task-list-wrapper"
-        style={this.state.style.background}
-      >
-        <div className="task-list-mask" style={this.state.style.background}>
+      <div id="content" className="task-list-wrapper">
+        <div className="task-list-mask">
           <div className="task-list--boxes">{this.renderTasks()}</div>
         </div>
         <Link to="/tasks/new" className="task-list--button">

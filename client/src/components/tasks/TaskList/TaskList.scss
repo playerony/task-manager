@@ -1,19 +1,10 @@
 .task-list-wrapper {
   width: 100%;
-  min-height: 100vh;
-  background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-529919.jpg");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: repeat;
 }
 
 .task-list-mask {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgba(189, 61, 58, 0.2);
   display: flex;
 }
@@ -24,12 +15,8 @@
   display: inline-block;
   text-align: center;
 
-  @media screen and (max-width: 720px) {
-    width: 300px;
-  }
-
   @media screen and (max-width: 540px) {
-    width: 270px;
+    width: 250px;
   }
 }
 
