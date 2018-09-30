@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
+import Footer from "../Footer/Footer";
+
 import "./Landing.scss";
 
 class Landing extends Component {
@@ -35,6 +37,7 @@ class Landing extends Component {
             <h1>Task Manager</h1>
             <p>Simplest way to manage your time</p>
             {this.renderContent()}
+            <Footer />
           </div>
         </div>
       </div>
