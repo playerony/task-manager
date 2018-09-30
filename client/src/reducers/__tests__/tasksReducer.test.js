@@ -2,7 +2,7 @@ import tasksReducer from "../tasksReducer";
 import { FETCH_TASKS } from "../../actions/types";
 
 describe("tasks reducer", () => {
-  it("handles actions of type FETCH_ACTIONS", () => {
+  it("handles actions of type FETCH_TASKS", () => {
     const action = {
       type: FETCH_TASKS,
       payload: [
