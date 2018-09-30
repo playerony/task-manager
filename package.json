@@ -13,7 +13,8 @@
     "test": "mocha ./test --recursive",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "tests": "concurrently \"npm run test\" \"npm run test a --prefix client\""
   },
   "repository": {
     "type": "git",
