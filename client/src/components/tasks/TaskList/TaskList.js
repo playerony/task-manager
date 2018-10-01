@@ -49,8 +49,6 @@ class TaskList extends Component {
 function mapStateToProps({ tasks }) {
   const result = _.sortBy(tasks, "_state.priority");
 
-  console.log(result);
-
   return { tasks: result };
 }
 
