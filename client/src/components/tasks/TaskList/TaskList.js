@@ -1,3 +1,4 @@
+import _ from "lodash";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
@@ -46,7 +47,11 @@ class TaskList extends Component {
 }
 
 function mapStateToProps({ tasks }) {
-  return { tasks };
+  const result = _.sortBy(tasks, "_state.priority");
+
+  console.log(result);
+
+  return { tasks: result };
 }
 
 export default connect(
