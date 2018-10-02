@@ -19,7 +19,7 @@ npm run dev
 
 ### To run tests
 ```bash
-npm run test
+npm run tests
 ```
 
 ### License

@@ -9,6 +9,7 @@ describe("State model", () => {
 
     state.validate(err => {
       expect(err.errors.name).to.exist;
+      expect(err.errors.priority).to.exist;
     });
   });
 });
