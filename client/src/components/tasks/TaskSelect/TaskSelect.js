@@ -1,5 +1,6 @@
 import _ from "lodash";
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import { fetchStates } from "../../../actions/index";
@@ -35,6 +36,17 @@ class TaskSelect extends Component {
     );
   }
 }
+
+TaskSelect.propTypes = {
+  label: PropTypes.string.isRequired,
+  input: PropTypes.shape({
+    name: PropTypes.string.isRequired
+  }).isRequired,
+  meta: PropTypes.shape({
+    error: PropTypes.string,
+    touched: PropTypes.bool.isRequired
+  }).isRequired
+};
 
 function mapStateToProps({ states }) {
   return { states };

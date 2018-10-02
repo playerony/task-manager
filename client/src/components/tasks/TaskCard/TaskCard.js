@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 import ConfirmModal from "../../modals/ConfirmModal/ConfirmModal";
 
@@ -67,5 +68,17 @@ class TaskCard extends Component {
     );
   }
 }
+
+TaskCard.propTypes = {
+  _id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  addedOn: PropTypes.string.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  _state: PropTypes.shape({
+    _id: PropTypes.string,
+    name: PropTypes.string.isRequired
+  }).isRequired
+};
 
 export default TaskCard;
