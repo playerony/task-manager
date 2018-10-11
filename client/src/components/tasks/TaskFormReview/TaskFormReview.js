@@ -27,7 +27,7 @@ class TaskFormReview extends Component {
     const { onCancel, formValues, submitTask, history } = this.props;
 
     return (
-      <div className="form-review-wrapper">
+      <div className="form-review--wrapper">
         <h1>Please confirm your entries</h1>
         {this.renderFields()}
         <button

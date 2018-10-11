@@ -27,7 +27,7 @@ class TaskForm extends Component {
   render() {
     return (
       <form
-        className="task-form-wrapper"
+        className="task-form--wrapper"
         autoComplete="off"
         onSubmit={this.props.handleSubmit(this.props.onTaskSubmit)}
       >

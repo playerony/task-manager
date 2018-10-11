@@ -1,4 +1,4 @@
-.task-card-wrapper {
+.task-card--wrapper {
   margin: auto;
   background-color: #fff;
   padding: 20px;
@@ -8,15 +8,19 @@
   word-wrap: break-word;
 }
 
-.task-card-content {
+.task-card--content {
   padding: 3px;
 }
 
-.task-card-delete {
+.task-card--delete {
   color: #515151;
   font-size: 14px;
   float: right;
   cursor: pointer;
+
+  &:hover {
+    color: #2b2b2b;
+  }
 
   @media screen and (max-width: 720px) {
     font-size: 12px;
@@ -25,13 +29,9 @@
   @media screen and (max-width: 540px) {
     font-size: 8px;
   }
-
-  &:hover {
-    color: #2b2b2b;
-  }
 }
 
-.task-card-header {
+.task-card--header {
   font-weight: 700;
   font-size: 32px;
 
@@ -44,7 +44,7 @@
   }
 }
 
-.task-card-date {
+.task-card--date {
   font-size: 12px;
   color: #818181;
 
@@ -57,7 +57,7 @@
   }
 }
 
-.task-card-description {
+.task-card--description {
   font-size: 16px;
 
   @media screen and (max-width: 720px) {

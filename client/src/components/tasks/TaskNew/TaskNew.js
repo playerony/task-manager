@@ -25,8 +25,8 @@ class TaskNew extends Component {
 
   render() {
     return (
-      <div className="task-new-wrapper">
-        <div className="task-new-mask">{this.renderContent()}</div>
+      <div className="task-new--wrapper">
+        <div className="task-new--mask">{this.renderContent()}</div>
       </div>
     );
   }

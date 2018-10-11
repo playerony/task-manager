@@ -1,4 +1,4 @@
-.confirm-modal-wrapper {
+.confirm-modal--wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.confirm-modal-content {
+.confirm-modal--content {
   width: 300px;
   height: 150px;
   background-color: #fff;
@@ -21,11 +21,11 @@
   line-height: 75px;
 }
 
-.confirm-modal-message {
+.confirm-modal--message {
   font-size: 32px;
 }
 
-.confirm-modal-button {
+.confirm-modal--button {
   display:inline-block;
   padding: 10px;
   text-decoration: none;

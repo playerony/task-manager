@@ -41,21 +41,21 @@ class TaskCard extends Component {
 
     return (
       <div
-        className="task-card-wrapper"
+        className="task-card--wrapper"
         style={{ borderLeft: `10px solid ${this.fetchBorderColor()}` }}
       >
-        <div className="task-card-content">
+        <div className="task-card--content">
           <div
-            className="task-card-delete"
+            className="task-card--delete"
             onClick={this.handleShowConfirmModal}
           >
             X
           </div>
-          <div className="task-card-date">
+          <div className="task-card--date">
             Added on: {new Date(addedOn).toLocaleDateString()}
           </div>
-          <div className="task-card-header">{name}</div>
-          <div className="task-card-description">{description}</div>
+          <div className="task-card--header">{name}</div>
+          <div className="task-card--description">{description}</div>
         </div>
 
         {this.state.showConfirmModal && (

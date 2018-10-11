@@ -27,8 +27,8 @@ class TaskList extends Component {
 
   render() {
     return (
-      <div id="content" className="task-list-wrapper">
-        <div className="task-list-mask">
+      <div id="content" className="task-list--wrapper">
+        <div className="task-list--mask">
           <div className="task-list--boxes">{this.renderTasks()}</div>
         </div>
         <Link to="/tasks/new" className="task-list--button">

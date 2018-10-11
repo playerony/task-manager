@@ -12,16 +12,16 @@ class Navbar extends Component {
         return;
       case false:
         return [
-          <li className="navbar-button" key="1">
+          <li className="navbar--button" key="1">
             <a href="/auth">Login</a>
           </li>
         ];
       default:
         return [
-          <li className="navbar-button--greetings" key="1">
+          <li className="navbar--button--greetings" key="1">
             <a>Hello, {auth.firstName}</a>
           </li>,
-          <li className="navbar-button" key="2">
+          <li className="navbar--button" key="2">
             <a href="/auth/logout">Logout</a>
           </li>
         ];
@@ -30,8 +30,8 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar-wrapper">
-        <div className="navbar-content">
+      <nav className="navbar--wrapper">
+        <div className="navbar--content">
           <ul>{this.renderContent()}</ul>
         </div>
       </nav>

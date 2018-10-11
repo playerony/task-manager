@@ -8,7 +8,7 @@ class Landing extends Component {
   state = {
     button: {
       text: "Let's create your first task",
-      style: "landing-content--see-more-button"
+      style: "landing--see-more-button"
     }
   };
 
@@ -29,9 +29,9 @@ class Landing extends Component {
 
   render() {
     return (
-      <div className="landing-wrapper">
-        <div className="landing-mask">
-          <div className="landing-content">
+      <div className="landing--wrapper">
+        <div className="landing--mask">
+          <div className="landing--content">
             <h1>Task Manager</h1>
             <p>Simplest way to manage your time</p>
             {this.renderContent()}
